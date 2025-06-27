@@ -18,11 +18,11 @@ The system leverages **soil moisture**, **temperature**, and **humidity sensors*
 
 | Component       | Technology / Tool                      |
 |-----------------|-----------------------------------------|
-| Microcontroller | Arduino / ESP32 / Raspberry Pi         |
+| Microcontroller | Arduino Mega   |
 | Sensors         | Soil Moisture, DHT11/DHT22              |
 | Backend         | Python (Flask/Django) / Node.js         |
 | Frontend        | HTML, CSS, JavaScript                   |
-| Database        | Firebase / PostgreSQL / MongoDB         |
+| Database        | Firebase / PostgreSQL          |
 | Dashboard       | Chart.js / React / Bootstrap            |
 | Hosting         | GitHub Pages / Netlify / Heroku         |
 
