@@ -1,6 +1,6 @@
 # 🌱 SMART IRRIGATION AND FERTILISER SYSTEM 💧
 
-This project is an **IoT-based Smart Farming Solution** that automates irrigation and fertilizer distribution using real-time environmental data. By integrating sensor readings, smart logic, and cloud-based monitoring, it supports **precision agriculture**, improves productivity, and conserves resources like water and nutrients.
+This project is an **IoT-based Smart Farming Solution** that automates irrigation and fertilizer distribution using real-time environmental data. By integrating sensor readings, smart logic, and Cloud-based monitoring, it supports **precision agriculture**, improves productivity, and conserves resources like water and nutrients.
 
 ---
 
