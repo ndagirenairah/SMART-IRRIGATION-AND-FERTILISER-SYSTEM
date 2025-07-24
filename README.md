@@ -31,7 +31,7 @@ The system leverages **soil moisture**, **temperature**, and **humidity sensors*
 ## 📦 Key Features
 
 - 🌡️ Real-time sensor monitoring (Moisture, Temp, Humidity)
-- 🚿 Auto-activated irrigation and fertilizer control
+- 🚿 Auto-activated Irrigation and fertilizer control
 - 📈 Data visualization with interactive graphs
 - 🌐 Web dashboard for live monitoring
 - 📲 Remote control and alert notifications
