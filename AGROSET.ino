@@ -21,8 +21,6 @@ const char* pass     = "";
 #define RELAY_WATER_PIN      9
 #define RELAY_FERTILISER_PIN 10
 
-bool firstRun = true;
-
 void setup() {
   Serial.begin(9600);
   gsm.begin(9600);
@@ -53,7 +51,7 @@ void loop() {
   float ec         = (voltage / 3.5) * 3500.0;
   float tds        = ec * 0.5;
 
-  // === Print to Serial Monitor ===
+  // === Display readings ===
   Serial.println("\n=== Sensor Readings ===");
   Serial.print("Moisture (raw): "); Serial.println(moistureRaw);
   Serial.print("pH: "); Serial.println(pH, 1);
@@ -64,24 +62,17 @@ void loop() {
   Serial.print(" µS/cm | TDS: "); Serial.println(tds, 2);
 
   // === Relay Logic ===
-  bool needWater = (moistureRaw == 30);
+  bool needWater = (moistureRaw == 30); // Activate only at 30
   bool needFert  = (nitrogen < 30 || phosphorus < 30 || potassium < 30);
 
-  if (firstRun) {
-    Serial.println("First run: forcing water pump ON");
-    digitalWrite(RELAY_WATER_PIN, LOW);  // ON
-    firstRun = false;
-  } else {
-    digitalWrite(RELAY_WATER_PIN, needWater ? LOW : HIGH);
-  }
-
+  digitalWrite(RELAY_WATER_PIN, needWater ? LOW : HIGH);
   digitalWrite(RELAY_FERTILISER_PIN, needFert ? LOW : HIGH);
 
-  Serial.println((!firstRun && needWater) ? "Water pump ON" : "Water pump OFF");
+  Serial.println(needWater ? "Water pump ON" : "Water pump OFF");
   Serial.println(needFert ? "Fertiliser ON" : "Fertiliser OFF");
 
   // === Construct URL ===
-  String url = "http://api.agroset.us/update?"
+  String url = "http://api.agroset.us/agrosoil/update?"
                "id=" + String(deviceID) +
                "&moisture=" + String(moistureRaw) +
                "&ph=" + String(pH, 1) +
