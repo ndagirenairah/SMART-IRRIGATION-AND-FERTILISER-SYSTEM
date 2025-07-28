@@ -14,28 +14,25 @@ The system leverages **soil moisture**, **temperature**, and **humidity sensors*
 
 ---
 
-## ⚙️ Technologies Used
+## ⚙️ Project Requirements both hardware and software
 
-| Component       | Technology / Tool                      |
+| Component       | Function                    |
 |-----------------|-----------------------------------------|
 | Microcontroller | Arduino Mega   |
-| Sensors         | Soil Moisture, DHT11/DHT22              |
-| Backend         | Python (Flask/Django) / Node.js         |
-| Frontend        | HTML, CSS, JavaScript                   |
-| Database        | Firebase / PostgreSQL          |
-| Dashboard       | Chart.js / React / Bootstrap            |
-| Hosting         | GitHub Pages / Netlify / Heroku         |
+| Sensors         | Soil Moisture, NPK sensor           |
+| Relay Module    | To control the water pump   |
+|Water Pump       | For irrigation               |
+|Jumper wires     | For circuit connections       |
+|Arduino IDE      | fOR PROGRAMMING The Microcontroller    |
 
----
 
 ## 📦 Key Features
 
 - 🌡️ Real-time sensor monitoring (Moisture, Temp, Humidity)
-- 🚿 Auto-activated Irrigation and fertilizer control
+- 🚿 Auto-activated Irrigation and soil nutrient monitoring
 - 📈 Data visualization with interactive graphs
-- 🌐 Web dashboard for live monitoring
-- 📲 Remote control and alert notifications
-- 🔐 Modular and secure architecture
+- 📲 Real Time data display and live monitoring
+-  Low-Cost & Energy Efficient
 
 ---
 
@@ -48,7 +45,7 @@ The system leverages **soil moisture**, **temperature**, and **humidity sensors*
    System evaluates if action is needed (e.g., turn pump ON).
 
 3. **Action Execution**  
-   Actuators are triggered to irrigate or fertilize based on logic.
+   Actuators are triggered to irrigate based on logic.
 
 4. **Data Transmission**  
    Data is sent to the backend for storage and visualization.
